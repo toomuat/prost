@@ -789,7 +789,8 @@ impl Config {
 
         let tmp;
         let file_descriptor_set_path = if let Some(path) = &self.file_descriptor_set_path {
-            path.clone()
+            // path.clone()
+            PathBuf::from(r"result.proto")
         } else {
             if self.skip_protoc_run {
                 return Err(Error::new(
